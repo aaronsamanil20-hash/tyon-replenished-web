@@ -263,45 +263,18 @@
       font-family: var(--font-mono); font-size: 12px;
       color: var(--text-muted); margin-bottom: 52px; line-height: 1.8;
     }
-    .contact-form { display: flex; flex-direction: column; gap: 16px; text-align: left; }
-    .form-field { display: flex; flex-direction: column; gap: 8px; }
-    .form-field label {
-      font-family: var(--font-mono); font-size: 10px;
-      letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted);
-    }
-    .form-field input,
-    .form-field textarea {
-      background: transparent; border: 1px solid var(--line);
-      color: var(--white); font-family: var(--font-mono);
-      font-size: 13px; padding: 14px 16px; outline: none;
-      transition: border-color 0.2s; resize: none; width: 100%;
-    }
-    .form-field input:focus,
-    .form-field textarea:focus { border-color: rgba(255,255,255,0.35); }
-    .form-field textarea { height: 130px; }
-    .form-submit {
-      font-family: var(--font-mono); font-size: 11px;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      background: var(--white); color: var(--black);
-      border: none; padding: 16px 32px;
-      cursor: default; transition: opacity 0.2s;
-      font-weight: 500; margin-top: 8px;
-    }
-    .form-submit:hover { opacity: 0.85; }
-    .form-submit:disabled { opacity: 0.4; cursor: not-allowed; }
-    .form-status {
-      font-family: var(--font-mono); font-size: 11px;
-      letter-spacing: 0.1em; text-align: center;
-      padding: 12px; margin-top: 8px; display: none;
-    }
-    .form-status.success {
-      display: block; border: 1px solid rgba(58,125,68,0.4);
-      color: rgba(58,125,68,0.9); background: rgba(58,125,68,0.06);
-    }
-    .form-status.error {
-      display: block; border: 1px solid rgba(220,60,60,0.4);
-      color: rgba(220,60,60,0.8); background: rgba(220,60,60,0.06);
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     footer {
       border-top: 1px solid var(--line);
@@ -333,6 +306,41 @@
       #contact { padding: 72px 24px; }
       footer { flex-direction: column; gap: 12px; text-align: center; }
       .hero-logo { width: 90px; height: 90px; }
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid var(--line);
+      padding: 20px 24px;
+      text-decoration: none;
+      color: var(--white);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .social-btn:hover {
+      border-color: rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.04);
+    }
+    .social-btn span:first-of-type {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      flex: 1;
+    }
+    .social-handle {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
     }
   </style>
 </head>
@@ -456,20 +464,20 @@
     <h2 class="section-title">Want to reach<br/>the founder?</h2>
     <p class="contact-sub">
       Whether you're a builder, investor, or just someone who gets it —<br/>
-      the door is open. Send a message directly to Aaron.
+      the door is open. Find Aaron on socials.
     </p>
-    <form class="contact-form" id="contactForm">
-      <div class="form-field">
-        <label for="cemail">Your Email</label>
-        <input type="email" id="cemail" name="email" placeholder="you@domain.com" required/>
-      </div>
-      <div class="form-field">
-        <label for="cmessage">Message</label>
-        <textarea id="cmessage" name="message" placeholder="What's on your mind?" required></textarea>
-      </div>
-      <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
-      <div class="form-status" id="formStatus"></div>
-    </form>
+    <div class="social-links">
+      <a href="https://www.instagram.com/aaron_.sam?igsh=dndwd2NzZnBwejlq" target="_blank" rel="noopener" class="social-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <span>Instagram</span>
+        <span class="social-handle">@aaron_.sam</span>
+      </a>
+      <a href="https://www.linkedin.com/in/aaron-sam-anil-b514843a4" target="_blank" rel="noopener" class="social-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <span>LinkedIn</span>
+        <span class="social-handle">Aaron Sam Anil</span>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -493,37 +501,6 @@
     });
   }, { threshold: 0.15 });
   document.querySelectorAll('.vp-item').forEach(el => observer.observe(el));
-
-  const form = document.getElementById('contactForm');
-  const statusEl = document.getElementById('formStatus');
-  const submitBtn = document.getElementById('submitBtn');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.getElementById('cemail').value.trim();
-    const message = document.getElementById('cmessage').value.trim();
-    if (!email || !message) return;
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    statusEl.className = 'form-status';
-    statusEl.style.display = 'none';
-
-    try {
-      const sub = encodeURIComponent('New message via TYON website');
-      const bod = encodeURIComponent('From: ' + email + '\n\n' + message);
-      window.location.href = 'mailto:tyonhq20067@gmail.com?subject=' + sub + '&body=' + bod;
-      statusEl.className = 'form-status success';
-      statusEl.textContent = 'Opening your mail app — send it from there.';
-      form.reset();
-    } catch(err) {
-      statusEl.className = 'form-status error';
-      statusEl.textContent = 'Something went wrong. Email tyonhq20067@gmail.com directly.';
-    }
-
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Send Message';
-  });
 </script>
 </body>
 </html>
