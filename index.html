@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="TYON — A long-term technology company. Technology. Cybersecurity. Space. Sustainability." />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#080c14" />
   <title>TYON</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,12 +13,12 @@
     /* TOKENS */
     :root {
       --bg:        #0a0a0a;
-      --surface:   #111111;
-      --border:    rgba(255,255,255,0.08);
+      --surface:   #0d1117;
+      --border:    rgba(59,130,246,0.12);
       --muted:     #444;
       --mid:       #888;
-      --text:      #e8e4dc;
-      --accent:    #c4b49a;
+      --text:      #e8eaf0;
+      --accent:    #3b82f6;
       --font-d:    'Cormorant Garamond', Georgia, serif;
       --font-b:    'Inter', -apple-system, sans-serif;
       --ease:      cubic-bezier(0.22, 1, 0.36, 1);
@@ -38,7 +38,7 @@
       line-height: 1.7;
       overflow-x: hidden;
     }
-    ::selection { background: var(--accent); color: var(--bg); }
+    ::selection { background: #3b82f6; color: #000; }
     a { color: inherit; text-decoration: none; }
     button { cursor: pointer; font-family: inherit; border: none; }
     img { display: block; max-width: 100%; }
@@ -111,18 +111,18 @@
       font-weight: 400;
       letter-spacing: 0;
       vertical-align: super;
-      color: var(--accent);
-      opacity: 0.8;
+      color: #3b82f6;
+      opacity: 0.9;
       margin-left: 2px;
     }
     .nav-contact {
-      color: var(--accent) !important;
-      border: 1px solid rgba(196,180,154,0.25);
+      color: #3b82f6 !important;
+      border: 1px solid rgba(59,130,246,0.25);
       padding: 0.4rem 1rem;
       transition: border-color 0.2s, color 0.2s !important;
     }
     .nav-contact:hover {
-      border-color: var(--accent) !important;
+      border-color: #3b82f6 !important;
       color: var(--text) !important;
     }
 
@@ -138,7 +138,7 @@
       display: block;
       width: 20px;
       height: 1px;
-      background: var(--text);
+      background: #e8eaf0;
       transition: transform 0.3s, opacity 0.3s;
     }
     .burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
@@ -188,7 +188,7 @@
       display: inline-block;
       width: 24px;
       height: 1px;
-      background: var(--accent);
+      background: #1d4ed8;
     }
 
     /* 01 HERO */
@@ -235,15 +235,15 @@
     .btn-p {
       display: inline-block;
       padding: 0.8rem 1.9rem;
-      background: var(--accent);
-      color: var(--bg);
+      background: #1d4ed8;
+      color: #ffffff;
       font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       transition: background 0.2s, transform 0.2s;
     }
-    .btn-p:hover { background: var(--text); transform: translateY(-1px); }
+    .btn-p:hover { background: #3b82f6; transform: translateY(-1px); }
     .btn-g {
       display: inline-block;
       padding: 0.8rem 1.9rem;
@@ -369,12 +369,12 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--accent);
-      border: 1px solid rgba(196,180,154,0.3);
+      border: 1px solid rgba(59,130,246,0.3);
       padding: 0.2rem 0.6rem;
     }
     .pillar-future {
-      color: var(--muted, #444);
-      border-color: rgba(100,100,100,0.3);
+      color: #555;
+      border-color: rgba(80,80,80,0.35);
     }
 
     /* 04 FORGE */
@@ -421,7 +421,7 @@
     }
     .forge-panel {
       border: 1px solid var(--border);
-      background: var(--surface);
+      background: #000000;
       aspect-ratio: 16/10;
       display: flex;
       align-items: center;
@@ -430,10 +430,7 @@
       overflow: hidden;
     }
     .forge-panel::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 35% 45%, rgba(196,180,154,0.04) 0%, transparent 65%);
+      content: none;
     }
     .forge-panel-inner {
       text-align: center;
@@ -448,7 +445,7 @@
       font-weight: 300;
       letter-spacing: 0.1em;
       color: #7a1c2e;
-      opacity: 0.18;
+      opacity: 1;
     }
     .forge-panel-sep {
       display: block;
@@ -456,14 +453,14 @@
       height: 1px;
       background: #7a1c2e;
       margin: 1rem auto;
-      opacity: 0.45;
+      opacity: 1;
     }
     .forge-panel-label {
       font-size: 0.58rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: #9e2a3f;
-      opacity: 0.6;
+      color: #f0ece4;
+      opacity: 1;
     }
 
     /* 05 FOUNDER */
@@ -494,7 +491,7 @@
       font-style: italic;
       color: var(--text);
       line-height: 1.5;
-      border-left: 1px solid var(--accent);
+      border-left: 1px solid #1d4ed8;
       padding-left: 1.5rem;
       margin-bottom: 1.5rem;
       max-width: 54ch;
@@ -574,7 +571,7 @@
       flex-shrink: 0;
     }
     .copy-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.18); }
-    .copy-btn.ok { color: var(--accent); border-color: var(--accent); }
+    .copy-btn.ok { color: #3b82f6; border-color: #3b82f6; }
 
     /* FORM */
     .cf { display: flex; flex-direction: column; }
@@ -584,7 +581,7 @@
       transition: border-color 0.25s;
     }
     .ff:first-child { border-top: 1px solid var(--border); }
-    .ff:focus-within { border-color: rgba(196,180,154,0.45); }
+    .ff:focus-within { border-color: rgba(59,130,246,0.45); }
     .ff label {
       position: absolute;
       top: 0.9rem; left: 0;
